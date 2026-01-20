@@ -1,7 +1,8 @@
 'use client';
 
 import React, { useState } from 'react';
-import { Palette, Github, Menu, X } from 'lucide-react';
+import { Palette, Github, Menu, X, Linkedin, Globe } from 'lucide-react';
+import { GITHUB_URL, LINKEDIN_URL, PORTFOLIO_URL } from '@/constants/socials';
 
 interface HeaderProps {
   isVisible: boolean;
@@ -34,12 +35,28 @@ export function Header({ isVisible }: HeaderProps) {
             How it works
           </a>
           <a
-            href="https://github.com"
+            href={GITHUB_URL}
             target="_blank"
             rel="noopener noreferrer"
             className="p-2 hover:bg-white/5 rounded-full transition-colors text-white"
           >
             <Github size={20} />
+          </a>
+          <a
+            href={LINKEDIN_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="p-2 hover:bg-white/5 rounded-full transition-colors text-white"
+          >
+            <Linkedin size={20} />
+          </a>
+          <a
+            href={PORTFOLIO_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="p-2 hover:bg-white/5 rounded-full transition-colors text-white"
+          >
+            <Globe size={20} />
           </a>
         </div>
 
@@ -60,13 +77,31 @@ export function Header({ isVisible }: HeaderProps) {
             How it works
           </a>
            <a
-            href="https://github.com"
+            href={GITHUB_URL}
             target="_blank"
             rel="noopener noreferrer"
             className="text-slate-400 hover:text-white block py-2"
             onClick={() => setIsMobileMenuOpen(false)}
           >
             GitHub
+          </a>
+          <a
+            href={LINKEDIN_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-slate-400 hover:text-white block py-2"
+            onClick={() => setIsMobileMenuOpen(false)}
+          >
+            LinkedIn
+          </a>
+          <a
+            href={PORTFOLIO_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-slate-400 hover:text-white block py-2"
+            onClick={() => setIsMobileMenuOpen(false)}
+          >
+            Portfolio
           </a>
         </div>
       )}

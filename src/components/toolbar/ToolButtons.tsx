@@ -16,7 +16,7 @@ export default function ToolButtons({
   onClear,
 }: ToolButtonsProps) {
   const buttonClass = (isActive: boolean, colorClass: string) =>
-    `p-3 rounded-xl transition-all duration-200 flex flex-col items-center justify-center gap-1 group ${
+    `p-2 md:p-3 rounded-full md:rounded-xl transition-all duration-200 flex items-center justify-center gap-1 group cursor-pointer ${
       isActive
         ? `${colorClass} text-white shadow-lg scale-105`
         : 'text-gray-400 hover:text-white hover:bg-white/10'

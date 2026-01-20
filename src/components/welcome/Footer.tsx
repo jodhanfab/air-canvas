@@ -13,7 +13,7 @@ export function Footer({ isVisible }: FooterProps) {
         isVisible ? 'opacity-100' : 'opacity-0'
       }`}
     >
-      <p>© {new Date().getFullYear()} AirCanvas. Built with MediaPipe & Next.js</p>
+      <p>© {new Date().getFullYear()} AirCanvas. </p>
     </footer>
   );
 }

@@ -19,7 +19,7 @@ export default function LineWidthSlider({
   onLineWidthChange,
 }: LineWidthSliderProps) {
   return (
-    <div className="flex flex-row md:flex-col items-center gap-3 md:gap-0 md:space-y-3 w-full md:w-auto">
+    <div className="md:flex flex-row md:flex-col items-center gap-3 md:gap-0 w-full md:w-auto hidden">
       <div className="flex items-center justify-between px-1 min-w-[30px] md:min-w-0 md:w-full">
         <div className="text-gray-400 text-[10px] font-bold uppercase tracking-widest hidden md:block">
           Size
@@ -27,7 +27,7 @@ export default function LineWidthSlider({
         <div className="text-white text-xs font-mono opacity-60">{lineWidth}px</div>
       </div>
 
-      <div className="relative flex items-center gap-3">
+      <div className="relative flex items-center gap-3 h-[3rem] ">
         <input
           type="range"
           min={MIN_LINE_WIDTH}
@@ -39,7 +39,7 @@ export default function LineWidthSlider({
         />
         
         <div 
-          className="shrink-0 rounded-full border border-white/10 shadow-sm transition-all duration-300"
+          className="shrink-0 rounded-full border border-white/10 shadow-sm transition-all duration-300 "
           style={{
             backgroundColor: color,
             width: Math.min(Math.max(lineWidth, 8), 24) + 'px',

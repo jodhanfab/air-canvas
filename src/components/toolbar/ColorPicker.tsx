@@ -19,12 +19,12 @@ export default function ColorPicker({
         Colors
       </div>
       
-      <div className="flex flex-row md:grid md:grid-cols-4 gap-2 md:gap-9 p-1">
+      <div className="flex flex-row md:grid md:grid-cols-4 gap-2 md:gap-9 p-3">
         {DEFAULT_COLORS.slice(0, 7).map((color) => (
           <button
             key={color}
             onClick={() => onColorChange(color)}
-            className={`w-10 h-10 md:w-auto md:h-auto shrink-0 aspect-square rounded-full transition-all duration-200 relative group overflow-hidden ${
+            className={`w-5 h-5 md:w-auto md:h-auto shrink-0 aspect-square rounded-full transition-all duration-200 relative group overflow-hidden ${
               selectedColor === color
                 ? 'ring-2 ring-white ring-offset-2 ring-offset-black scale-110'
                 : 'hover:scale-110 opacity-80 hover:opacity-100'
@@ -40,7 +40,7 @@ export default function ColorPicker({
           </button>
         ))}
 
-        <div className="relative w-10 h-10 md:w-auto md:h-auto shrink-0 aspect-square rounded-full overflow-hidden group">
+        <div className="relative w-5 h-5 md:w-auto md:h-auto shrink-0 aspect-square rounded-full overflow-hidden group">
           <input
             type="color"
             value={selectedColor}
